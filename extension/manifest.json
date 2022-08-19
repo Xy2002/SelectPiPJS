@@ -3,7 +3,7 @@
   "name": "select-picture-in-picture",
   "version": "1.0.0",
   "action": {},
-  "description": "Press and hold the corresponding button and then move the cursor to select the video on the page to open the picture-in-picture function.",
+  "description": "Press and hold the key and then move the cursor to select the video on the page to open the picture-in-picture function.",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

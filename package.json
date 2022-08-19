@@ -1,7 +1,7 @@
 {
   "name": "select-picture-in-picture",
   "version": "1.0.0",
-  "description": "Press and hold the corresponding button and then move the cursor to select the video on the page to open the picture-in-picture function.",
+  "description": "Press and hold the key and then move the cursor to select the video on the page to open the picture-in-picture function.",
   "main": "index.js",
   "repository": "https://github.com/Xy2002/SelectPiPJS",
   "author": "Marshall <57112423+Xy2002@users.noreply.github.com>",
