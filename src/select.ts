@@ -26,6 +26,7 @@ function keyDownHandler(e: KeyboardEvent) {
         e.preventDefault();
         active = true;
         setSelectedElement();
+        preventPageScroll(true);
     }
 
     if (e.code === 'KeyP' && e.altKey && active) {
@@ -47,6 +48,7 @@ function keyDownHandler(e: KeyboardEvent) {
 
 function keyUpHandler(e: KeyboardEvent) {
     if (e.key === 'Alt' && active) {
+        preventPageScroll(false);
         active = false;
         setTimeout(() => {
             if (boxElement) {
@@ -57,7 +59,25 @@ function keyUpHandler(e: KeyboardEvent) {
     }
 }
 
+function preventPageScroll(active: boolean): void {
+    if (active) {
+        window.addEventListener('DOMMouseScroll', scrollingPreventDefault, false);
+        window.addEventListener('wheel', scrollingPreventDefault, {
+            passive: false,
+        });
+        window.addEventListener('mousewheel', scrollingPreventDefault, {
+            passive: false,
+        });
+    } else {
+        window.removeEventListener('DOMMouseScroll', scrollingPreventDefault);
+        window.removeEventListener('wheel', scrollingPreventDefault);
+        window.removeEventListener('mousewheel', scrollingPreventDefault);
+    }
+}
 
+function scrollingPreventDefault(e: Event): void {
+    e.preventDefault();
+}
 
 function cursorMovedHandler(e: MouseEvent) {
     if (e.composedPath) {
