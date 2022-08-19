@@ -1,5 +1,5 @@
 # SelectPiPJS
-A Chrome extension.Press and hold the corresponding button and then move the cursor to select the video on the page to open the picture-in-picture function.
+A Chrome extension.Press and hold the corresponding shortcut key, then move the cursor to select the video on the page to open the picture-in-picture function.
 
 # How To Use
 1. Use the yarn build command or clone this repository, open `chrome://extensions/` in Chrome, then open the `developer mode` in the upper right corner and load the unpacked `extensions` in the directory extension.
