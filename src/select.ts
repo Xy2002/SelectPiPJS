@@ -40,6 +40,7 @@ function keyDownHandler(e: KeyboardEvent) {
             selectedElement = null;
             active = false;
             showNotify('Video is in Picture-in-Picture mode', 'success');
+            preventPageScroll(false);
         } else {
             showNotify('Only video can be in Picture-in-Picture mode', 'danger');
         }
