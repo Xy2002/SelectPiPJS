@@ -1,8 +1,6 @@
 name: Build Extension and create release
 
-on:
-  push:
-    branches: [ "main" ]
+on: push
 
 jobs:
   publish:
@@ -46,7 +44,7 @@ jobs:
         run:
           zip -r Select-Picture-in-Picture-${{steps.version.outputs.value}}.zip ./extension/
           
-      - name: Create release and upload release asset
+      - name: 7. Create release and upload release asset
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
@@ -56,4 +54,3 @@ jobs:
           files: |
             Select-Picture-in-Picture-${{steps.version.outputs.value}}.zip
             LICENSE 
-      
