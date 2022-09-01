@@ -1,7 +1,7 @@
 # SelectPiPJS
 
-![License](https://img.shields.io/github/license/Xy2002/SelectPiPJS)  
-
+![License](https://img.shields.io/github/license/Xy2002/SelectPiPJS)
+![Release](https://img.shields.io/github/v/release/xy2002/SelectPiPJS)  
 A Chrome extension.Press and hold the corresponding shortcut key, then move the cursor to select the video on the page to open the picture-in-picture function.Inspired by [Steven Lei](https://github.com/stevenlei)'s [Spacing.js](https://github.com/stevenlei/spacingjs)
 
 # How To Use
